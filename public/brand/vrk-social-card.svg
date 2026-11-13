@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <!-- Premium Warm Ivory Canvas -->
+  <rect width="1200" height="630" fill="#FAF8F4" />
+  
+  <!-- Architectural Border & Grid Matrix -->
+  <rect x="40" y="40" width="1120" height="550" stroke="#DEDAD3" stroke-width="1.5" />
+  <line x1="40" y1="140" x2="1160" y2="140" stroke="#DEDAD3" stroke-width="1" />
+  <line x1="820" y1="40" x2="820" y2="590" stroke="#DEDAD3" stroke-width="1" />
+  <line x1="40" y1="480" x2="1160" y2="480" stroke="#DEDAD3" stroke-width="1" />
+
+  <!-- Top Bar Identification -->
+  <text x="70" y="96" font-family="'Archivo', system-ui, sans-serif" font-weight="900" font-size="28" letter-spacing="-0.03em" fill="#202322">VRK <tspan font-weight="500">SOLUTIONS</tspan></text>
+  <text x="320" y="96" font-family="'IBM Plex Mono', monospace" font-weight="600" font-size="14" letter-spacing="0.2em" fill="#E85D24">WE BUILD. WE SCALE. WE DOMINATE.</text>
+  <text x="850" y="96" font-family="'IBM Plex Mono', monospace" font-weight="500" font-size="14" fill="#626460">HYDERABAD / GLOBAL DELIVERY</text>
+
+  <!-- Main Hero Editorial Statement -->
+  <g transform="translate(70, 240)">
+    <text x="0" y="0" font-family="'Archivo', system-ui, sans-serif" font-weight="800" font-size="52" letter-spacing="-0.03em" fill="#202322">Engineering Digital Products</text>
+    <text x="0" y="64" font-family="'Archivo', system-ui, sans-serif" font-weight="800" font-size="52" letter-spacing="-0.03em" fill="#E85D24">Built for Real Business Growth.</text>
+    <text x="0" y="140" font-family="'Archivo', system-ui, sans-serif" font-weight="400" font-size="22" fill="#626460">Web Platforms · SaaS · Mobile Applications · AI & Automation · UI/UX</text>
+  </g>
+
+  <!-- Right Side Architectural Monogram Accent -->
+  <g transform="translate(860, 200) scale(4.8)">
+    <path d="M4 6L16 38H22L12 6H4Z" fill="#E85D24" />
+    <path d="M16 38L21 24H27L20 42H14L16 38Z" fill="#C54A1A" />
+    <path d="M18 6H34C37.866 6 41 9.13401 41 13C41 16.866 37.866 20 34 20H23.5L21.5 15H33C34.1046 15 35 14.1046 35 13C35 11.8954 34.1046 11 33 11H19.8L18 6Z" fill="#E85D24" />
+    <path d="M29 19L38 6H44L33 21L29 19Z" fill="#F47735" />
+    <path d="M25 21L38 42H44L31 21H25Z" fill="#E85D24" />
+  </g>
+
+  <!-- Bottom Details Bar -->
+  <text x="70" y="540" font-family="'IBM Plex Mono', monospace" font-size="15" fill="#202322">https://vrksolutions.in</text>
+  <text x="450" y="540" font-family="'IBM Plex Mono', monospace" font-size="15" fill="#626460">+91 9398845947 · info@vrksolutions.in</text>
+  <text x="960" y="540" font-family="'IBM Plex Mono', monospace" font-size="15" font-weight="600" fill="#E85D24">PROPOSAL READY</text>
+</svg>

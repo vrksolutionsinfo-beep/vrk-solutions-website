@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- VRK Geometric Monogram: Precision Interlocking Architectural Form -->
+  <!-- V Stem & Angle -->
+  <path d="M4 8L16 38L22 23L13 8H4Z" fill="#E85D24" />
+  <!-- Central R Loop & Spine -->
+  <path d="M16 8H31C35.4183 8 39 11.5817 39 16C39 20.4183 35.4183 24 31 24H21.5L25 16H31C31 16 33 16 33 16C33 16 33 16 33 16H23.5L20 8H16Z" fill="#C54A1A" />
+  <path d="M22 24L32 40H42L30 22C34.5 20.5 38 17 38 12C38 7 34 4 28 4H14L10 14H26C27.6569 14 29 15.3431 29 17C29 18.6569 27.6569 20 26 20H18L26 38H34L26 24H22Z" fill="url(#vrk-mono-grad)" />
+  <!-- K Forward Dynamic Strut -->
+  <path d="M34 8L44 8L31 24L44 40H34L24 27L28 21L34 8Z" fill="#E85D24" />
+  <defs>
+    <linearGradient id="vrk-mono-grad" x1="10" y1="4" x2="42" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E85D24" />
+      <stop offset="0.5" stop-color="#F47735" />
+      <stop offset="1" stop-color="#C54A1A" />
+    </linearGradient>
+  </defs>
+</svg>

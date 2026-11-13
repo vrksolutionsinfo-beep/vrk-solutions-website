@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none">
+  <!-- VRK Solutions Bespoke Horizontal Brand Signature -->
+  <!-- Mark Symbol (44x44) -->
+  <g transform="translate(2, 2)">
+    <!-- Base geometric structure -->
+    <!-- V Wing -->
+    <path d="M4 6L16 38H22L12 6H4Z" fill="#E85D24" />
+    <path d="M16 38L21 24H27L20 42H14L16 38Z" fill="#C54A1A" />
+    <!-- R Arch & Core -->
+    <path d="M18 6H34C37.866 6 41 9.13401 41 13C41 16.866 37.866 20 34 20H23.5L21.5 15H33C34.1046 15 35 14.1046 35 13C35 11.8954 34.1046 11 33 11H19.8L18 6Z" fill="#E85D24" />
+    <!-- K Upper Diagonal -->
+    <path d="M29 19L38 6H44L33 21L29 19Z" fill="#F47735" />
+    <!-- R/K Forward Scaling Strut -->
+    <path d="M25 21L38 42H44L31 21H25Z" fill="#E85D24" />
+    <!-- Micro accent shard -->
+    <polygon points="23,17 26,17 28,21 25,21" fill="#C54A1A" opacity="0.9" />
+  </g>
+
+  <!-- Typography: VRK Wordmark -->
+  <g transform="translate(58, 28)">
+    <text x="0" y="0" font-family="'Archivo', system-ui, -apple-system, sans-serif" font-weight="900" font-size="24" letter-spacing="-0.03em" fill="#202322">VRK</text>
+    <text x="64" y="0" font-family="'Archivo', system-ui, -apple-system, sans-serif" font-weight="500" font-size="24" letter-spacing="-0.02em" fill="#202322">SOLUTIONS</text>
+  </g>
+
+  <!-- Precision Technical Tagline Sub-label -->
+  <g transform="translate(60, 41)">
+    <text x="0" y="0" font-family="'IBM Plex Mono', monospace" font-weight="600" font-size="7.5" letter-spacing="0.22em" fill="#E85D24">WE BUILD. WE SCALE. WE DOMINATE.</text>
+  </g>
+</svg>

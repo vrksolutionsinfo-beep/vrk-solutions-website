@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none">
+  <!-- VRK Solutions Monochrome Single-Color Brand Signature -->
+  <g transform="translate(2, 2)">
+    <path d="M4 6L16 38H22L12 6H4Z" fill="#202322" />
+    <path d="M16 38L21 24H27L20 42H14L16 38Z" fill="#202322" />
+    <path d="M18 6H34C37.866 6 41 9.13401 41 13C41 16.866 37.866 20 34 20H23.5L21.5 15H33C34.1046 15 35 14.1046 35 13C35 11.8954 34.1046 11 33 11H19.8L18 6Z" fill="#202322" />
+    <path d="M29 19L38 6H44L33 21L29 19Z" fill="#202322" />
+    <path d="M25 21L38 42H44L31 21H25Z" fill="#202322" />
+  </g>
+  <g transform="translate(58, 28)">
+    <text x="0" y="0" font-family="'Archivo', system-ui, -apple-system, sans-serif" font-weight="900" font-size="24" letter-spacing="-0.03em" fill="#202322">VRK</text>
+    <text x="64" y="0" font-family="'Archivo', system-ui, -apple-system, sans-serif" font-weight="500" font-size="24" letter-spacing="-0.02em" fill="#202322">SOLUTIONS</text>
+  </g>
+  <g transform="translate(60, 41)">
+    <text x="0" y="0" font-family="'IBM Plex Mono', monospace" font-weight="600" font-size="7.5" letter-spacing="0.22em" fill="#202322">WE BUILD. WE SCALE. WE DOMINATE.</text>
+  </g>
+</svg>

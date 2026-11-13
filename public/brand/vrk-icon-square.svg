@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Square App Icon / High-res Mark -->
+  <rect width="512" height="512" rx="112" fill="#FAF8F4" />
+  <rect x="2" y="2" width="508" height="508" rx="110" stroke="#DEDAD3" stroke-width="4" />
+  
+  <g transform="translate(100, 100) scale(6.5)">
+    <!-- Monogram geometry scaled -->
+    <path d="M4 6L16 38H22L12 6H4Z" fill="#E85D24" />
+    <path d="M16 38L21 24H27L20 42H14L16 38Z" fill="#C54A1A" />
+    <path d="M18 6H34C37.866 6 41 9.13401 41 13C41 16.866 37.866 20 34 20H23.5L21.5 15H33C34.1046 15 35 14.1046 35 13C35 11.8954 34.1046 11 33 11H19.8L18 6Z" fill="#E85D24" />
+    <path d="M29 19L38 6H44L33 21L29 19Z" fill="#F47735" />
+    <path d="M25 21L38 42H44L31 21H25Z" fill="#E85D24" />
+    <polygon points="23,17 26,17 28,21 25,21" fill="#C54A1A" opacity="0.9" />
+  </g>
+</svg>
