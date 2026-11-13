@@ -17,18 +17,18 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col w-full overflow-hidden">
+    <div className="flex flex-col w-full overflow-x-clip">
       {/* =========================================================================
           SECTION 1: SIGNATURE HERO WITH 3D MONOLITH
           ========================================================================= */}
-      <section className="relative min-h-[calc(100vh-4.5rem)] flex items-center border-b border-brand-hairline bg-gradient-to-b from-brand-warm-ivory via-brand-warm-ivory to-brand-soft-surface/60 py-12 lg:py-20">
+      <section className="relative min-h-[calc(100vh-4.5rem)] flex items-center border-b border-brand-hairline bg-gradient-to-b from-brand-warm-ivory via-brand-warm-ivory to-brand-soft-surface/60 py-8 sm:py-12 lg:py-20">
         <div className="container-main w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 flex flex-col justify-center">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-soft-surface border border-brand-hairline w-fit mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-soft-surface border border-brand-hairline w-fit mb-4 sm:mb-6">
                 <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
-                <span className="font-mono text-xs font-semibold tracking-wider text-brand-primary-text uppercase">
+                <span className="font-mono text-[11px] sm:text-xs font-semibold tracking-wider text-brand-primary-text uppercase">
                   Technology Engineering & Delivery
                 </span>
               </div>
@@ -38,40 +38,40 @@ export default function HomePage() {
               </h1>
 
               {/* Tagline callout */}
-              <div className="mt-4 flex items-center gap-3">
-                <div className="h-[2px] w-8 bg-brand-orange" />
-                <span className="font-mono text-xs sm:text-sm font-bold tracking-[0.22em] text-brand-orange">
+              <div className="mt-3 sm:mt-4 flex items-center gap-3">
+                <div className="h-[2px] w-6 sm:w-8 bg-brand-orange" />
+                <span className="font-mono text-xs sm:text-sm font-bold tracking-[0.2em] text-brand-orange">
                   {COMPANY.tagline}
                 </span>
               </div>
 
-              <p className="text-body-lg text-brand-secondary-text mt-6 max-w-2xl">
+              <p className="text-body-lg text-brand-secondary-text mt-4 sm:mt-6 max-w-2xl">
                 {COMPANY.subheadline}
               </p>
 
               {/* CTAs */}
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Button variant="primary" size="lg" href="/contact">
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                <Button variant="primary" size="lg" href="/contact" className="w-full sm:w-auto text-center justify-center">
                   Start Your Project
                 </Button>
-                <Button variant="secondary" size="lg" href="/services">
+                <Button variant="secondary" size="lg" href="/services" className="w-full sm:w-auto text-center justify-center">
                   Explore Our Services
                 </Button>
               </div>
 
               {/* Technical confidence metric pill */}
-              <div className="mt-12 pt-8 border-t border-brand-hairline flex flex-wrap gap-8 text-xs font-mono text-brand-secondary-text">
+              <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-brand-hairline grid grid-cols-3 gap-2 sm:gap-8 text-xs font-mono text-brand-secondary-text">
                 <div>
-                  <span className="block text-base font-bold text-brand-primary-text">8 Core</span>
+                  <span className="block text-sm sm:text-base font-bold text-brand-primary-text">8 Core</span>
                   Disciplines
                 </div>
                 <div>
-                  <span className="block text-base font-bold text-brand-primary-text">Next.js / TypeScript</span>
+                  <span className="block text-sm sm:text-base font-bold text-brand-primary-text truncate">Next.js / TS</span>
                   Standard Stack
                 </div>
                 <div>
-                  <span className="block text-base font-bold text-brand-primary-text">Global & India</span>
-                  Client Delivery
+                  <span className="block text-sm sm:text-base font-bold text-brand-primary-text">Global & IN</span>
+                  Delivery Scope
                 </div>
               </div>
             </div>

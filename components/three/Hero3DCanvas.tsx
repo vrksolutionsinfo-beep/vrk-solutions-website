@@ -214,7 +214,7 @@ export default function Hero3DCanvas() {
   }, []);
 
   return (
-    <div className="relative w-full h-[420px] lg:h-[540px] flex items-center justify-center">
+    <div className="relative w-full h-[280px] sm:h-[360px] lg:h-[540px] flex items-center justify-center">
       {hasWebGL ? (
         <div
           ref={containerRef}

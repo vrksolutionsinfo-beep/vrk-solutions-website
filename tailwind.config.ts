@@ -20,6 +20,7 @@ const config: Config = {
           "primary-text": "#202322",
           "secondary-text": "#626460",
           "hairline-border": "#DEDAD3",
+          hairline: "#DEDAD3",
           white: "#FFFFFF",
         },
       },

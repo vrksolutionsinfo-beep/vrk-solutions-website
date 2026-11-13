@@ -104,11 +104,11 @@ export function Header() {
 
   return (
     <header
-      className="sticky top-0 z-40 w-full border-b border-brand-hairline bg-white/95 backdrop-blur-sm"
+      className="fixed top-0 left-0 right-0 z-50 w-full border-b border-brand-hairline bg-brand-white/95 backdrop-blur-md transition-shadow duration-200 shadow-sm"
       role="banner"
     >
       <nav
-        className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:h-[72px] lg:px-8"
+        className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-[72px] lg:px-8"
         role="navigation"
         aria-label="Main navigation"
       >
@@ -174,18 +174,19 @@ export function Header() {
       {/* Mobile drawer */}
       <div
         ref={drawerRef}
-        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-sm flex-col bg-white shadow-2xl transition-transform duration-300 ease-in-out lg:hidden ${drawerOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-sm h-[100dvh] flex-col bg-white shadow-2xl transition-transform duration-300 ease-in-out lg:hidden ${
+          drawerOpen ? "translate-x-0" : "translate-x-full"
+        }`}
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation"
       >
         {/* Drawer header */}
-        <div className="flex h-16 items-center justify-between border-b border-brand-hairline px-4">
+        <div className="flex h-16 items-center justify-between border-b border-brand-hairline px-4 sm:px-6 shrink-0">
           <VRKLogo />
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-brand-primary-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange"
+            className="inline-flex items-center justify-center rounded-md p-2.5 text-brand-primary-text hover:bg-brand-soft-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange"
             aria-label="Close menu"
             onClick={closeDrawer}
           >
@@ -206,31 +207,43 @@ export function Header() {
         </div>
 
         {/* Drawer links */}
-        <div className="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-6">
+        <div className="flex flex-1 flex-col gap-1.5 overflow-y-auto px-4 sm:px-6 py-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={closeDrawer}
-              className={`rounded-md px-4 py-3 text-lg font-medium transition-colors duration-150 ${isActive(link.href)
+              className={`rounded-md px-4 py-3.5 text-lg font-semibold transition-colors duration-150 flex items-center justify-between ${
+                isActive(link.href)
                   ? "bg-brand-warm-ivory text-brand-orange"
                   : "text-brand-primary-text hover:bg-brand-warm-ivory hover:text-brand-orange"
-                }`}
+              }`}
             >
-              {link.label}
+              <span>{link.label}</span>
+              <span className="text-xs font-mono opacity-50">→</span>
             </Link>
           ))}
         </div>
 
         {/* Drawer CTA */}
-        <div className="border-t border-brand-hairline p-4">
+        <div className="border-t border-brand-hairline p-4 sm:p-6 pb-[calc(1rem+env(safe-area-inset-bottom,0px))] shrink-0 bg-brand-soft-surface/30">
           <Link
             href="/contact"
             onClick={closeDrawer}
-            className="flex w-full items-center justify-center rounded-md bg-brand-orange px-6 py-3.5 text-base font-semibold text-white transition-colors duration-150 hover:bg-brand-deep-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2"
+            className="flex w-full items-center justify-center rounded-md bg-brand-orange px-6 py-4 text-base font-bold text-white transition-colors duration-150 hover:bg-brand-deep-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 shadow-sm"
           >
             Start a Project
           </Link>
+          <div className="mt-3 text-center">
+            <a
+              href="https://wa.me/919398845947"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-semibold text-brand-secondary-text hover:text-brand-orange inline-flex items-center gap-1.5"
+            >
+              <span>Or WhatsApp: +91 93988 45947</span>
+            </a>
+          </div>
         </div>
       </div>
     </header>
