@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
   { label: "Website Design & Development", slug: "website-design-development" },
@@ -50,26 +51,14 @@ const contact = [
 
 function FooterLogo() {
   return (
-    <Link href="/" className="inline-flex items-center gap-2.5" aria-label="VRK Solutions – Home">
-      <svg
-        width="36"
-        height="36"
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        className="shrink-0"
-      >
-        <path d="M4 6L16 26L28 6H22L16 18L10 6H4Z" fill="#E85D24" />
-      </svg>
-      <span className="flex items-baseline gap-1.5">
-        <span className="font-sans text-2xl font-black tracking-tight text-brand-warm-ivory">
-          VRK
-        </span>
-        <span className="font-sans text-2xl font-medium tracking-tight text-brand-warm-neutral">
-          SOLUTIONS
-        </span>
-      </span>
+    <Link href="/" className="inline-flex items-center" aria-label="VRK Solutions – Home">
+      <Image
+        src="/brand/vrk-logo-dark.png"
+        alt="VRK Solutions"
+        width={260}
+        height={40}
+        className="h-9 sm:h-10 w-auto object-contain"
+      />
     </Link>
   );
 }

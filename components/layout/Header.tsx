@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -15,30 +16,15 @@ const navLinks = [
 
 function VRKLogo() {
   return (
-    <Link href="/" className="flex items-center gap-2 group" aria-label="VRK Solutions – Home">
-      {/* Geometric V mark */}
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        className="shrink-0"
-      >
-        <path
-          d="M4 6L16 26L28 6H22L16 18L10 6H4Z"
-          fill="#E85D24"
-        />
-      </svg>
-      <span className="flex items-baseline gap-1">
-        <span className="font-sans font-black text-xl tracking-tight text-brand-primary-text">
-          VRK
-        </span>
-        <span className="font-sans font-medium text-xl tracking-tight text-brand-secondary-text">
-          SOLUTIONS
-        </span>
-      </span>
+    <Link href="/" className="flex items-center group py-1" aria-label="VRK Solutions – Home">
+      <Image
+        src="/brand/vrk-logo-light.png"
+        alt="VRK Solutions"
+        width={240}
+        height={36}
+        className="h-8 sm:h-9 w-auto object-contain"
+        priority
+      />
     </Link>
   );
 }
@@ -135,11 +121,10 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`rounded-md px-3 py-2 text-sm font-medium transition-colors duration-150 ${
-                isActive(link.href)
+              className={`rounded-md px-3 py-2 text-sm font-medium transition-colors duration-150 ${isActive(link.href)
                   ? "text-brand-orange"
                   : "text-brand-primary-text hover:text-brand-orange"
-              }`}
+                }`}
             >
               {link.label}
             </Link>
@@ -180,9 +165,8 @@ export function Header() {
 
       {/* Mobile drawer overlay */}
       <div
-        className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-300 lg:hidden ${
-          drawerOpen ? "opacity-100" : "pointer-events-none opacity-0"
-        }`}
+        className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-300 lg:hidden ${drawerOpen ? "opacity-100" : "pointer-events-none opacity-0"
+          }`}
         aria-hidden={!drawerOpen}
         onClick={closeDrawer}
       />
@@ -190,9 +174,8 @@ export function Header() {
       {/* Mobile drawer */}
       <div
         ref={drawerRef}
-        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-sm flex-col bg-white shadow-2xl transition-transform duration-300 ease-in-out lg:hidden ${
-          drawerOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-sm flex-col bg-white shadow-2xl transition-transform duration-300 ease-in-out lg:hidden ${drawerOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation"
@@ -229,11 +212,10 @@ export function Header() {
               key={link.href}
               href={link.href}
               onClick={closeDrawer}
-              className={`rounded-md px-4 py-3 text-lg font-medium transition-colors duration-150 ${
-                isActive(link.href)
+              className={`rounded-md px-4 py-3 text-lg font-medium transition-colors duration-150 ${isActive(link.href)
                   ? "bg-brand-warm-ivory text-brand-orange"
                   : "text-brand-primary-text hover:bg-brand-warm-ivory hover:text-brand-orange"
-              }`}
+                }`}
             >
               {link.label}
             </Link>
