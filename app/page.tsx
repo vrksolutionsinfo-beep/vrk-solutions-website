@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Sculpture from '@/components/Sculpture';
+import HeroLogo from '@/components/HeroLogo';
 import BriefBuilder from '@/components/BriefBuilder';
 import { ServiceList, Process, Faq } from '@/components/Site';
 import { industries } from '@/lib/content';
@@ -50,9 +50,9 @@ export default async function Home() {
             </div>
           </div>
           <div className="hero-art">
-            <Sculpture />
+            <HeroLogo />
             <span className="art-caption">
-              <span>VRK / STRUCTURE STUDY</span>
+              <span>VRK SOLUTIONS / OUR SIGNATURE</span>
               <span>01 — ∞</span>
             </span>
           </div>

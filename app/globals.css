@@ -241,42 +241,81 @@ img {
 .hero-art {
   position: relative;
 }
-.sculpture {
+.brand-stage {
   height: 490px;
   background: var(--surface);
   position: relative;
   overflow: hidden;
   border-radius: 180px 180px 2px 2px;
 }
-.sculpture-fallback {
-  position: absolute;
-  inset: 0;
+.hero-logo-lockup {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  transform: rotate(-20deg);
+  justify-content: center;
+  position: absolute;
+  inset: 20px 24px 50px;
+  animation: logo-arrive 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
-.sculpture-fallback i {
-  width: 76px;
-  height: 260px;
-  border: 24px solid var(--orange);
-  border-top-width: 35px;
-  transform: skewY(-25deg);
-  box-shadow:
-    12px 12px 0 #b94315,
-    20px 25px 35px #20232215;
-  margin: 0 4px;
+.hero-logo-mark {
+  display: block;
+  width: clamp(150px, 43%, 230px);
+  height: auto;
+  overflow: visible;
+  margin-bottom: 8px;
 }
-.sculpture-fallback i:nth-child(2) {
-  transform: skewY(-25deg) translateY(-20px);
+.hero-logo-v {
+  animation: logo-build-left 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
-.sculpture-fallback i:nth-child(3) {
-  transform: skewY(-25deg) translateY(-40px);
+.hero-logo-k {
+  animation: logo-build-right 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.hero-logo-name {
+  font-size: clamp(52px, 6vw, 76px);
+  font-weight: 750;
+  letter-spacing: -0.055em;
+  line-height: 1;
+}
+.hero-logo-descriptor {
+  font-size: clamp(12px, 1.3vw, 17px);
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  padding-left: 0.35em;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+@keyframes logo-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes logo-build-left {
+  from {
+    transform: translate(-10px, -5px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes logo-build-right {
+  from {
+    transform: translate(10px, 5px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
 }
 .object-label {
   position: absolute;
   bottom: 22px;
-  left: 25px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
   z-index: 2;
   font: 9px var(--font-mono);
   letter-spacing: 0.08em;
@@ -888,7 +927,7 @@ textarea {
     padding-top: 50px;
     padding-bottom: 65px;
   }
-  .sculpture {
+  .brand-stage {
     height: 550px;
   }
 }
@@ -905,7 +944,7 @@ textarea {
   .hero h1 {
     font-size: 76px;
   }
-  .sculpture {
+  .brand-stage {
     height: 420px;
   }
   .hero-actions {
@@ -997,12 +1036,9 @@ textarea {
     width: 100%;
     margin: auto;
   }
-  .sculpture {
+  .brand-stage {
     height: 340px;
     border-radius: 150px 150px 2px 2px;
-  }
-  .sculpture-fallback {
-    transform: scale(0.85) rotate(-20deg);
   }
   .hero-baseline {
     font-size: 8px;
