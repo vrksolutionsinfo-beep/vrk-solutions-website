@@ -1,3 +1,9 @@
+import { pageMetadata } from '@/lib/seo/site';
+export const metadata = pageMetadata(
+  'Website & App Developers in Kakinada',
+  'VRK Solutions builds websites, mobile apps and software for businesses in Kakinada, Andhra Pradesh. Discuss your project through a remote consultation.',
+  '/',
+);
 import Link from 'next/link';
 import HeroLogo from '@/components/HeroLogo';
 import BriefBuilder from '@/components/BriefBuilder';
@@ -20,7 +26,8 @@ export default async function Home() {
       <section className="hero container">
         <div className="hero-top">
           <span className="eyebrow">
-            <i className="status-dot" /> TECHNOLOGY. WITH INTENT.
+            <i className="status-dot" /> DIGITAL AGENCY / KAKINADA, ANDHRA
+            PRADESH
           </span>
           <span className="eyebrow hero-note">
             INDEPENDENT THINKING.
@@ -38,7 +45,7 @@ export default async function Home() {
             </h1>
             <p>
               {settings?.heroCopy ||
-                'From ambitious websites to intelligent software platforms, we design and engineer digital products built for real business growth.'}
+                'VRK Solutions designs websites, mobile apps and software for businesses in Kakinada and beyond. Based in Andhra Pradesh, we collaborate digitally to turn clear requirements into useful products.'}
             </p>
             <div className="hero-actions">
               <Link href="/get-quote" className="button">
@@ -60,6 +67,34 @@ export default async function Home() {
         <div className="hero-baseline">
           <span>{settings?.tagline || 'WE BUILD. WE SCALE. WE DOMINATE.'}</span>
           <span>SCROLL TO EXPLORE ↓</span>
+        </div>
+      </section>
+      <section className="container local-home" aria-labelledby="local-heading">
+        <div>
+          <span className="eyebrow">
+            LOCAL UNDERSTANDING. DIGITAL COLLABORATION.
+          </span>
+          <h2 id="local-heading">
+            Website and app development
+            <br />
+            for Kakinada businesses.
+          </h2>
+        </div>
+        <div>
+          <p>
+            VRK Solutions is based in Kakinada, Andhra Pradesh and operates
+            digitally, with remote consultations by phone, email or WhatsApp. We
+            help startups, service businesses and growing teams plan websites,
+            applications and custom software.
+          </p>
+          <div className="local-links">
+            <Link href="/website-development-kakinada">
+              Website developers in Kakinada ↗
+            </Link>
+            <Link href="/app-development-kakinada">
+              App developers in Kakinada ↗
+            </Link>
+          </div>
         </div>
       </section>
       <section className="section container intro">

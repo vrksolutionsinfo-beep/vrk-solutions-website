@@ -25,3 +25,7 @@ Verify a sender domain in Resend. Set `RESEND_API_KEY` and `ENQUIRY_FROM`. The r
 Original geometric vector assets are in `public/brand`. Allow clear space equal to one-quarter of the emblem height. Minimum emblem width 28px; horizontal lockup 145px. Archivo and IBM Plex Mono are open-source Google Fonts loaded via Next font. Use a raster 1200×630 social image for broad sharing support; the editable SVG source is supplied.
 
 See DEPLOYMENT.md for launch prerequisites and verification limits.
+
+## Search optimization
+
+See SEO-AUDIT.md for the implemented local content, canonical/indexing policy, CMS metadata fields, keyword-intent map and production-domain rollout. See SEO-VERIFICATION.json for the actual rendered-page crawl. `npm run seo:check` checks a production server at http://127.0.0.1:3100.

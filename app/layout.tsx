@@ -1,3 +1,5 @@
+import { site, organizationGraph } from '@/lib/seo/site';
+import { JsonLd } from '@/components/seo/JsonLd';
 import type { Metadata } from 'next';
 import { Archivo, IBM_Plex_Mono } from 'next/font/google';
 import { Header } from '@/components/Header';
@@ -16,21 +18,18 @@ const mono = IBM_Plex_Mono({
   display: 'swap',
 });
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://vrksolutions.in',
-  ),
+  metadataBase: new URL(site.url),
   title: {
-    default: 'VRK Solutions | Digital Products. Built for Momentum.',
+    default: 'Website & App Developers in Kakinada | VRK Solutions',
     template: '%s | VRK Solutions',
   },
-  description:
-    'Website, application, software, UI/UX and AI development for ambitious businesses in India and worldwide.',
-  openGraph: {
-    type: 'website',
-    siteName: 'VRK Solutions',
-    images: ['/brand/social.svg'],
+  description: site.description,
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.BING_SITE_VERIFICATION
+      ? { 'msvalidate.01': process.env.BING_SITE_VERIFICATION }
+      : undefined,
   },
-  robots: { index: true, follow: true },
 };
 export default async function Layout({
   children,
@@ -51,19 +50,7 @@ export default async function Layout({
         <Footer
           tagline={settings?.tagline || 'WE BUILD. WE SCALE. WE DOMINATE.'}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'VRK Solutions',
-              url: 'https://vrksolutions.in',
-              email: 'info@vrksolutions.in',
-              telephone: '+919398845947',
-            }),
-          }}
-        />
+        <JsonLd data={organizationGraph} />
       </body>
     </html>
   );

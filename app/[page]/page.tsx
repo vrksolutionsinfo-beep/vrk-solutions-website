@@ -1,3 +1,8 @@
+import { pageContent as pages } from '@/lib/seo/pages';
+import { guides } from '@/lib/seo/guides';
+import { pageMetadata, canonicalUrl, websiteId, orgId } from '@/lib/seo/site';
+import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
+import { JsonLd } from '@/components/seo/JsonLd';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ServiceList, Process, Faq } from '@/components/Site';
@@ -5,73 +10,6 @@ import EnquiryForm from '@/components/EnquiryForm';
 import { industries } from '@/lib/content';
 import { query } from '@/sanity/lib';
 import { PortableText } from 'next-sanity';
-const pages: Record<string, [string, string, string]> = {
-  about: [
-    'About VRK Solutions',
-    'Thoughtful technology. Shared ambition.',
-    'We are a technology services company for people building what comes next. We bring design, engineering and product thinking together around your business goals.',
-  ],
-  services: [
-    'Our services',
-    'The right capabilities. A considered approach.',
-    'From your first digital presence to the systems behind your business, explore eight ways we can help.',
-  ],
-  work: [
-    'Our work',
-    'Useful work starts with understanding.',
-    'Our verified case studies are being prepared for publication. We share client names, project details and outcomes only with permission.',
-  ],
-  process: [
-    'How we work',
-    'Clear thinking. Deliberate delivery.',
-    'Our proposed delivery methodology brings structure to complex projects. The scope, milestones and support arrangements are agreed for each engagement.',
-  ],
-  industries: [
-    'Industries',
-    'Your context shapes the solution.',
-    'These are illustrative applications of our capabilities, rather than claims of completed projects in each sector.',
-  ],
-  faq: [
-    'Frequently asked questions',
-    'A little clarity before we begin.',
-    'Explore the essentials. For anything specific to your business, let’s have a conversation.',
-  ],
-  contact: [
-    'Contact',
-    'Let’s make the next move.',
-    'Tell us about the challenge, the idea or the opportunity. We’ll explore an appropriate digital approach together.',
-  ],
-  'book-consultation': [
-    'Free consultation',
-    'Start with a conversation.',
-    'Request an initial discussion about your goals and possible next steps. Timing and availability will be confirmed by email.',
-  ],
-  'get-quote': [
-    'Project quotation',
-    'Give your ambition a starting point.',
-    'Share what you have in mind. A tailored proposal starts with understanding the scope, priorities and requirements.',
-  ],
-  insights: [
-    'Insights',
-    'Thinking worth sharing.',
-    'Our editorial collection is being prepared. Future articles will explore design, engineering and practical digital decision-making.',
-  ],
-  'privacy-policy': [
-    'Privacy policy',
-    'Your information, handled with care.',
-    'This policy describes the information collected through this website and how it is used.',
-  ],
-  'terms-and-conditions': [
-    'Terms & conditions',
-    'Clear terms for using this website.',
-    'Please read these terms before using the VRK Solutions website.',
-  ],
-  'cookie-policy': [
-    'Cookie policy',
-    'A considered approach to cookies.',
-    'This website does not currently include advertising or third-party analytics cookies.',
-  ],
-};
 export async function generateMetadata({
   params,
 }: {
@@ -79,9 +17,23 @@ export async function generateMetadata({
 }) {
   const { page } = await params;
   const p = pages[page];
-  return p
-    ? { title: p[0], description: p[2], alternates: { canonical: '/' + page } }
-    : { title: 'Not found' };
+  if (!p) notFound();
+  const content = await query<{ seoTitle?: string; seoDescription?: string }>(
+    '*[_type=="page" && slug.current==$slug][0]{seoTitle,seoDescription}',
+    { slug: page },
+  );
+  const publishedCount =
+    page === 'work'
+      ? await query<number>(
+          'count(*[_type=="caseStudy" && published==true && clientPermissionConfirmed==true])',
+        )
+      : 1;
+  return pageMetadata(
+    content?.seoTitle || p[0],
+    content?.seoDescription || p[2],
+    '/' + page,
+    { noindex: page === 'work' && !publishedCount },
+  );
 }
 export default async function Page({
   params,
@@ -97,14 +49,45 @@ export default async function Page({
     intro?: string;
     body?: Parameters<typeof PortableText>[0]['value'];
   }>('*[_type=="page" && slug.current==$slug][0]{intro,body}', { slug: page });
-  const items = ['work', 'insights'].includes(page)
+  const cmsItems = ['work', 'insights'].includes(page)
     ? await query<{ title: string; slug: string; excerpt: string }[]>(
         `*[_type=="${page === 'work' ? 'caseStudy' : 'article'}" && ($preview || published==true) ${page === 'work' ? '&& clientPermissionConfirmed==true' : ''}]{title,"slug":slug.current,excerpt}`,
       )
     : null;
+  const items =
+    page === 'insights'
+      ? [
+          ...(cmsItems || []),
+          ...guides
+            .filter((g) => !cmsItems?.some((c) => c.slug === g.slug))
+            .map((g) => ({
+              slug: g.slug,
+              title: g.title,
+              excerpt: g.description,
+            })),
+        ]
+      : cmsItems;
   return (
     <main id="main">
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type':
+            page === 'about'
+              ? 'AboutPage'
+              : page === 'contact'
+                ? 'ContactPage'
+                : ['services', 'insights', 'work'].includes(page)
+                  ? 'CollectionPage'
+                  : 'WebPage',
+          name: p[0],
+          url: canonicalUrl('/' + page),
+          isPartOf: { '@id': websiteId },
+          about: { '@id': orgId },
+        }}
+      />
       <section className="container page-intro">
+        <Breadcrumbs items={[{ name: p[0], path: '/' + page }]} />
         <span className="eyebrow">VRK SOLUTIONS / {p[0].toUpperCase()}</span>
         <h1>{p[1]}</h1>
         <p>{cms?.intro || p[2]}</p>
@@ -139,10 +122,11 @@ export default async function Page({
                 Focused on progress.
               </h2>
               <p>
-                We work with startups, entrepreneurs, small and medium
-                businesses, enterprises and international clients. Every project
-                deserves an understanding of the people it serves and the
-                business it supports.
+                Based in Kakinada, Andhra Pradesh, we operate digitally and work
+                with startups, entrepreneurs, small and medium businesses,
+                enterprises and international clients. Every project deserves an
+                understanding of the people it serves and the business it
+                supports.
               </p>
             </div>
             <Process />
@@ -151,6 +135,12 @@ export default async function Page({
         {['contact', 'book-consultation', 'get-quote'].includes(page) && (
           <div className="contact-layout">
             <aside>
+              <p className="contact-location">
+                <strong>Kakinada, Andhra Pradesh, India</strong>
+                <br />
+                We operate digitally. Remote consultations only; no public
+                walk-in office.
+              </p>
               <h2>
                 Good things start
                 <br />

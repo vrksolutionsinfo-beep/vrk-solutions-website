@@ -1,3 +1,5 @@
+import { pageMetadata } from '@/lib/seo/site';
+import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import Image from 'next/image';
 import { query } from '@/sanity/lib';
 import { notFound } from 'next/navigation';
@@ -22,7 +24,12 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const p = await get((await params).slug);
-  return { title: p?.title, description: p?.seoDescription || p?.excerpt };
+  if (!p) notFound();
+  return pageMetadata(
+    p.title,
+    p.seoDescription || p.excerpt,
+    '/work/' + (await params).slug,
+  );
 }
 export default async function Detail({
   params,
@@ -34,6 +41,12 @@ export default async function Detail({
   return (
     <main id="main">
       <section className="container page-intro">
+        <Breadcrumbs
+          items={[
+            { name: 'Our work', path: '/work' },
+            { name: p.title, path: '/work/' + (await params).slug },
+          ]}
+        />
         <Link className="eyebrow" href="/work">
           WORK / BACK TO INDEX
         </Link>

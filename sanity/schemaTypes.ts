@@ -44,6 +44,20 @@ export const schemaTypes = [
         options: { source: 'title' },
         validation: (r) => r.required(),
       }),
+      defineField({
+        name: 'seoTitle',
+        title: 'Search title',
+        type: 'string',
+        validation: (r) =>
+          r.max(70).warning('Keep titles concise and specific.'),
+      }),
+      defineField({
+        name: 'seoDescription',
+        title: 'Search description',
+        type: 'text',
+        validation: (r) =>
+          r.max(170).warning('Write a concise, useful summary.'),
+      }),
       defineField({ name: 'intro', type: 'text' }),
       defineField({ name: 'body', type: 'array', of: [{ type: 'block' }] }),
     ],
@@ -68,6 +82,7 @@ export const schemaTypes = [
       defineField({ name: 'description', type: 'text' }),
       defineField({ name: 'detail', type: 'text' }),
       defineField({ name: 'body', type: 'array', of: [{ type: 'block' }] }),
+      defineField({ name: 'seoTitle', type: 'string' }),
       defineField({ name: 'seoDescription', type: 'text' }),
     ],
   }),
@@ -122,6 +137,12 @@ export const schemaTypes = [
           type: 'boolean',
           initialValue: false,
         }),
+        defineField({
+          name: 'publishedAt',
+          type: 'datetime',
+          description:
+            'Actual publication date. Do not backdate or imply an earlier publication.',
+        }),
         defineField({ name: 'excerpt', type: 'text' }),
         defineField({
           name: 'cover',
@@ -132,6 +153,7 @@ export const schemaTypes = [
           ],
         }),
         defineField({ name: 'body', type: 'array', of: [{ type: 'block' }] }),
+        defineField({ name: 'seoTitle', type: 'string' }),
         defineField({ name: 'seoDescription', type: 'text' }),
         ...(name === 'caseStudy'
           ? [

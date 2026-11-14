@@ -1,0 +1,290 @@
+{
+  "base": "http://127.0.0.1:3100",
+  "canonicalOrigin": "https://www.vrksolutions.in",
+  "pagesChecked": 28,
+  "internalPathsChecked": 28,
+  "sitemapUrls": 27,
+  "errors": [],
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "title": "Website & App Developers in Kakinada | VRK Solutions",
+      "description": "VRK Solutions builds websites, mobile apps and software for businesses in Kakinada, Andhra Pradesh. Discuss your project through a remote consultation.",
+      "canonical": "https://www.vrksolutions.in",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "title": "Website, App & Software Development Services | VRK Solutions",
+      "description": "Explore website development, mobile apps, SaaS, UI/UX, AI automation, SEO, e-commerce and custom software services from VRK Solutions.",
+      "canonical": "https://www.vrksolutions.in/services",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/work",
+      "status": 200,
+      "title": "Our Work | VRK Solutions",
+      "description": "Explore the VRK Solutions approach to digital projects. Verified case studies are published only with client permission.",
+      "canonical": "https://www.vrksolutions.in/work",
+      "h1": 1,
+      "noindex": true,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/process",
+      "status": 200,
+      "title": "Our Development Process | VRK Solutions",
+      "description": "Learn how VRK Solutions approaches discovery, planning, design, development, testing and launch, with scope and responsibilities agreed for each project.",
+      "canonical": "https://www.vrksolutions.in/process",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/industries",
+      "status": 200,
+      "title": "Digital Solutions by Industry | VRK Solutions",
+      "description": "Explore possible website, application and automation solutions for healthcare, education, commerce, logistics and other business sectors.",
+      "canonical": "https://www.vrksolutions.in/industries",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "title": "About VRK Solutions",
+      "description": "Meet VRK Solutions, a digital agency based in Kakinada, Andhra Pradesh, delivering websites, applications and software through remote collaboration.",
+      "canonical": "https://www.vrksolutions.in/about",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "title": "Contact VRK Solutions in Kakinada",
+      "description": "Contact VRK Solutions in Kakinada for website, app and software enquiries. Call +91 9398845947 or email info@vrksolutions.in for a remote consultation.",
+      "canonical": "https://www.vrksolutions.in/contact",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/get-quote",
+      "status": 200,
+      "title": "Request a Website or App Development Quote | VRK Solutions",
+      "description": "Share your website, mobile app or software requirements with VRK Solutions. Request a tailored quotation based on scope, integrations and priorities.",
+      "canonical": "https://www.vrksolutions.in/get-quote",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/website-development-kakinada",
+      "status": 200,
+      "title": "Website Developers in Kakinada | VRK Solutions",
+      "description": "Website design and development in Kakinada by VRK Solutions. Responsive business websites, e-commerce and redesigns, with remote consultations and custom quotes.",
+      "canonical": "https://www.vrksolutions.in/website-development-kakinada",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 4
+    },
+    {
+      "path": "/app-development-kakinada",
+      "status": 200,
+      "title": "App Developers in Kakinada | VRK Solutions",
+      "description": "Mobile app development in Kakinada with VRK Solutions. Plan Android, iOS and connected web applications with clear scope, UI/UX design and release preparation.",
+      "canonical": "https://www.vrksolutions.in/app-development-kakinada",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 4
+    },
+    {
+      "path": "/services/website-development",
+      "status": 200,
+      "title": "Website Design & Development Services | VRK Solutions",
+      "description": "Responsive business websites, redesigns and CMS development from VRK Solutions. Plan content, integrations and launch with a digital agency in Kakinada.",
+      "canonical": "https://www.vrksolutions.in/services/website-development",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/services/web-applications-saas",
+      "status": 200,
+      "title": "Web Application & SaaS Development | VRK Solutions",
+      "description": "Build web applications and SaaS products with VRK Solutions. Define your MVP, user roles, integrations and release plan before development begins.",
+      "canonical": "https://www.vrksolutions.in/services/web-applications-saas",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/services/mobile-app-development",
+      "status": 200,
+      "title": "Mobile App Development Services | VRK Solutions",
+      "description": "Plan and build Android and iOS applications with VRK Solutions. Explore UI/UX, backend integrations, testing and app release preparation.",
+      "canonical": "https://www.vrksolutions.in/services/mobile-app-development",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/services/ui-ux-design",
+      "status": 200,
+      "title": "UI/UX Design for Websites & Applications | VRK Solutions",
+      "description": "UI/UX design for websites and applications, including user journeys, wireframes, prototypes and design systems. Discuss your product with VRK Solutions.",
+      "canonical": "https://www.vrksolutions.in/services/ui-ux-design",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/services/ai-automation",
+      "status": 200,
+      "title": "AI Integration & Business Automation | VRK Solutions",
+      "description": "Explore AI integration and business workflow automation with VRK Solutions. Assess data, human review, integrations and practical evaluation criteria.",
+      "canonical": "https://www.vrksolutions.in/services/ai-automation",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/services/digital-marketing-seo",
+      "status": 200,
+      "title": "SEO & Digital Marketing Services | VRK Solutions",
+      "description": "Technical SEO, content planning and digital marketing services from VRK Solutions. Improve search foundations and enquiry journeys with a scoped approach.",
+      "canonical": "https://www.vrksolutions.in/services/digital-marketing-seo",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/services/ecommerce-development",
+      "status": 200,
+      "title": "E-commerce Website Development | VRK Solutions",
+      "description": "E-commerce development from VRK Solutions: storefronts, product catalogs, payment integrations and order workflows shaped around your business.",
+      "canonical": "https://www.vrksolutions.in/services/ecommerce-development",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/services/software-development",
+      "status": 200,
+      "title": "Custom Software Development Services | VRK Solutions",
+      "description": "Custom software, APIs and business tools from VRK Solutions. Define workflows, integrations, acceptance criteria and handover for a maintainable solution.",
+      "canonical": "https://www.vrksolutions.in/services/software-development",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/faq",
+      "status": 200,
+      "title": "Website & App Development FAQs | VRK Solutions",
+      "description": "Answers about website and app development, remote collaboration, quotations, project timelines and getting started with VRK Solutions in Kakinada.",
+      "canonical": "https://www.vrksolutions.in/faq",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 4
+    },
+    {
+      "path": "/insights",
+      "status": 200,
+      "title": "Website & App Planning Guides | VRK Solutions",
+      "description": "Practical guides to choosing a website developer, understanding project costs and deciding between a website and a mobile app.",
+      "canonical": "https://www.vrksolutions.in/insights",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/book-consultation",
+      "status": 200,
+      "title": "Book a Free Project Consultation | VRK Solutions",
+      "description": "Request a free initial remote consultation with VRK Solutions to discuss your website, mobile app or software project and agree on useful next steps.",
+      "canonical": "https://www.vrksolutions.in/book-consultation",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/insights/how-to-choose-website-developer-kakinada",
+      "status": 200,
+      "title": "How to choose a website developer in Kakinada | VRK Solutions",
+      "description": "A practical checklist for comparing website developers: scope, content, SEO foundations, ownership, testing and ongoing support.",
+      "canonical": "https://www.vrksolutions.in/insights/how-to-choose-website-developer-kakinada",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/insights/website-development-cost-planning",
+      "status": 200,
+      "title": "What affects the cost of a business website? | VRK Solutions",
+      "description": "Understand website cost drivers, recurring expenses and the information a developer needs to prepare a meaningful project quotation.",
+      "canonical": "https://www.vrksolutions.in/insights/website-development-cost-planning",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/insights/website-vs-mobile-app-for-business",
+      "status": 200,
+      "title": "Website or mobile app: which should your business build first? | VRK Solutions",
+      "description": "Compare websites, web applications and mobile apps by discovery, repeat use, device features, backend needs and maintenance.",
+      "canonical": "https://www.vrksolutions.in/insights/website-vs-mobile-app-for-business",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/site-map",
+      "status": 200,
+      "title": "Website Directory | VRK Solutions",
+      "description": "Find every VRK Solutions service, Kakinada development page, project planning guide and contact route.",
+      "canonical": "https://www.vrksolutions.in/site-map",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 2
+    },
+    {
+      "path": "/privacy-policy",
+      "status": 200,
+      "title": "Privacy Policy | VRK Solutions",
+      "description": "Read how VRK Solutions handles website enquiries, contact information and third-party services, and how to contact us about your privacy.",
+      "canonical": "https://www.vrksolutions.in/privacy-policy",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/terms-and-conditions",
+      "status": 200,
+      "title": "Terms & Conditions | VRK Solutions",
+      "description": "Read the VRK Solutions website terms, including acceptable use, website information and the separate agreements required for project engagements.",
+      "canonical": "https://www.vrksolutions.in/terms-and-conditions",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    },
+    {
+      "path": "/cookie-policy",
+      "status": 200,
+      "title": "Cookie Policy | VRK Solutions",
+      "description": "Learn about essential preview and editing cookies on the VRK Solutions website. Optional advertising and analytics cookies are not currently used.",
+      "canonical": "https://www.vrksolutions.in/cookie-policy",
+      "h1": 1,
+      "noindex": false,
+      "jsonLdBlocks": 3
+    }
+  ]
+}

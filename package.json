@@ -8,9 +8,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test": "vitest run tests/validation.test.ts tests/enquiry.test.ts",
+    "test": "vitest run",
     "test:e2e": "playwright test",
-    "format": "prettier --write app components lib sanity tests *.ts *.mjs *.md *.json"
+    "format": "prettier --write app components lib sanity tests *.ts *.mjs *.md *.json",
+    "seo:check": "python scripts/check-seo.py"
   },
   "keywords": [],
   "author": "",

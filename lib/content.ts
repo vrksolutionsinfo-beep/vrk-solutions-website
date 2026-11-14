@@ -114,6 +114,15 @@ export const industries = [
 ];
 export const faqs = [
   [
+    'Where is VRK Solutions located?',
+    'VRK Solutions is based in Kakinada, Andhra Pradesh, India. We operate digitally and do not have a public walk-in office. Contact us by phone, email or WhatsApp for a remote consultation.',
+  ],
+  [
+    'Do you develop websites and apps for Kakinada businesses?',
+    'Yes. We offer website development, mobile apps and related digital services for businesses in Kakinada, surrounding Andhra Pradesh and other locations through remote collaboration.',
+  ],
+
+  [
     'What services does VRK Solutions provide?',
     'We provide website development, web applications and SaaS, mobile apps, UI/UX design, AI and automation, digital marketing and SEO, e-commerce and custom software development.',
   ],

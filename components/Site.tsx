@@ -1,3 +1,4 @@
+import { Questions, type Question } from '@/components/seo/Questions';
 import { query } from '@/sanity/lib';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -53,17 +54,10 @@ export async function Faq({ all = false }: { all?: boolean }) {
     ? content.map((c) => [c.title, c.description])
     : faqs;
   return (
-    <div className="faq-list">
-      {entries.slice(0, all ? entries.length : 5).map(([q, a]) => (
-        <details key={q}>
-          <summary>
-            {q}
-            <span>+</span>
-          </summary>
-          <p>{a}</p>
-        </details>
-      ))}
-    </div>
+    <Questions
+      items={entries.slice(0, all ? entries.length : 5) as Question[]}
+      structured={all}
+    />
   );
 }
 export async function Cta() {
@@ -118,6 +112,11 @@ export function Footer({ tagline }: { tagline: string }) {
           <span className="eyebrow">LET’S CONNECT</span>
           <a href="mailto:info@vrksolutions.in">info@vrksolutions.in ↗</a>
           <a href="tel:+919398845947">+91 9398845947</a>
+          <p className="footer-location">
+            Kakinada, Andhra Pradesh, India
+            <br />
+            Digital agency · Remote consultations
+          </p>
         </div>
         <div>
           <span className="eyebrow">EXPLORE</span>
@@ -125,6 +124,35 @@ export function Footer({ tagline }: { tagline: string }) {
           <Link href="/insights">Insights</Link>
           <Link href="/book-consultation">Free consultation</Link>
         </div>
+        <nav className="footer-directory" aria-label="Website directory">
+          <div>
+            <span className="eyebrow">SERVICES</span>
+            {services.map((s) => (
+              <Link key={s.slug} href={'/services/' + s.slug}>
+                {s.title}
+              </Link>
+            ))}
+          </div>
+          <div>
+            <span className="eyebrow">KAKINADA & PROJECT PLANNING</span>
+            <Link href="/website-development-kakinada">
+              Website developers in Kakinada
+            </Link>
+            <Link href="/app-development-kakinada">
+              App developers in Kakinada
+            </Link>
+            <Link href="/insights/how-to-choose-website-developer-kakinada">
+              Choosing a website developer
+            </Link>
+            <Link href="/insights/website-development-cost-planning">
+              Website cost planning
+            </Link>
+            <Link href="/insights/website-vs-mobile-app-for-business">
+              Website or mobile app?
+            </Link>
+            <Link href="/site-map">All pages</Link>
+          </div>
+        </nav>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} VRK Solutions</span>
           <div>
