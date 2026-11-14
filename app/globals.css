@@ -241,74 +241,20 @@ img {
 .hero-art {
   position: relative;
 }
-.brand-stage {
-  height: 490px;
-  background: var(--surface);
-  position: relative;
+/* Keep the supplied artwork intact; the soft edge joins the warm page surface. */
+.hero-brand-artwork {
+  width: 100%;
   overflow: hidden;
-  border-radius: 180px 180px 2px 2px;
+  border-radius: 2px;
+  background: #f7e9de;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 96%, transparent);
 }
-.hero-logo-lockup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  inset: 20px 24px 50px;
-  animation: logo-arrive 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-.hero-logo-mark {
+.hero-brand-artwork img {
   display: block;
-  width: clamp(150px, 43%, 230px);
+  width: 100%;
   height: auto;
-  overflow: visible;
-  margin-bottom: 8px;
-}
-.hero-logo-v {
-  animation: logo-build-left 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-.hero-logo-k {
-  animation: logo-build-right 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-.hero-logo-name {
-  font-size: clamp(52px, 6vw, 76px);
-  font-weight: 750;
-  letter-spacing: -0.055em;
-  line-height: 1;
-}
-.hero-logo-descriptor {
-  font-size: clamp(12px, 1.3vw, 17px);
-  font-weight: 500;
-  letter-spacing: 0.35em;
-  padding-left: 0.35em;
-  line-height: 1.6;
-  margin-top: 10px;
-}
-@keyframes logo-arrive {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes logo-build-left {
-  from {
-    transform: translate(-10px, -5px);
-  }
-  to {
-    transform: translate(0, 0);
-  }
-}
-@keyframes logo-build-right {
-  from {
-    transform: translate(10px, 5px);
-  }
-  to {
-    transform: translate(0, 0);
-  }
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
 }
 .object-label {
   position: absolute;
@@ -927,9 +873,6 @@ textarea {
     padding-top: 50px;
     padding-bottom: 65px;
   }
-  .brand-stage {
-    height: 550px;
-  }
 }
 @media (max-width: 1100px) {
   .container {
@@ -943,9 +886,6 @@ textarea {
   }
   .hero h1 {
     font-size: 76px;
-  }
-  .brand-stage {
-    height: 420px;
   }
   .hero-actions {
     gap: 18px;
@@ -1035,10 +975,6 @@ textarea {
     max-width: 520px;
     width: 100%;
     margin: auto;
-  }
-  .brand-stage {
-    height: 340px;
-    border-radius: 150px 150px 2px 2px;
   }
   .hero-baseline {
     font-size: 8px;
