@@ -31,10 +31,15 @@ export function Header() {
   return (
     <header className="header">
       <Link href="/" aria-label="VRK Solutions home" className="brand">
-        <Image src="/brand/monogram.svg" width="44" height="38" alt="" />
-        <span>
-          VRK<span className="brand-small">SOLUTIONS</span>
-        </span>
+        <Image
+          src="/brand/header-logo.png"
+          width={928}
+          height={124}
+          alt="VRK Solutions"
+          className="header-logo"
+          sizes="(max-width:760px) 180px, 250px"
+          priority
+        />
       </Link>
       <nav aria-label="Main navigation" className="desktop-nav">
         {links.map(([label, url]) => (

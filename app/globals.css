@@ -1467,3 +1467,45 @@ textarea {
     line-height: 1.8;
   }
 }
+
+/* A clear line accompanies navigation hover, keyboard focus and current state. */
+.desktop-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9px;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+.desktop-nav a:hover::after,
+.desktop-nav a:focus-visible::after,
+.desktop-nav a[aria-current='page']::after {
+  transform: scaleX(1);
+}
+.mobile-nav nav a:hover,
+.mobile-nav nav a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 8px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .desktop-nav a::after {
+    transition: none;
+  }
+}
+
+.header .header-logo {
+  width: clamp(180px, 20vw, 250px);
+  height: auto;
+  max-width: none;
+  display: block;
+}
+@media (max-width: 760px) {
+  .header .header-logo {
+    width: 180px;
+  }
+}
